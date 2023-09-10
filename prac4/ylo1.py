@@ -5,7 +5,6 @@ if __name__ == '__main__':
     min_finished_time = float('inf')
     top_racers = {}
 
-
     for racer_id, racer_info in RACE_DATA.items():
         finished_time = racer_info['FinishedTimeSeconds']
         if finished_time < min_finished_time:
