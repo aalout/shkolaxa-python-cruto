@@ -32,7 +32,7 @@ for epoch in range(1000):
     optimizer.step()
 
 #Проверка работы модели на новых данных
-#Результат должен быть приближенным к [0, 1, 1, 0]
+#Результат должен быть приближенным к [0, 1, 1, 0], но он получается близким к [0.5, 0.5, 0.5, 0.5], не знаю, почему
 test_inputs = torch.tensor([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=torch.float32)
 predictions = model(test_inputs)
 print(predictions.squeeze().detach().numpy())
